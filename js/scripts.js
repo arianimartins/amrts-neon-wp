@@ -34,9 +34,9 @@ jQuery(document).ready(function($){
 });
 
 //PEGA ALTURA DO FOOTER E AJUSTA MARGIM DO WRAPPER
-jQuery(document).ready(function($){
+/*jQuery(document).ready(function($){
 	var $footer = $('footer');
 	var $footerHeight = $footer.height();
 
 	$('section.main-section').delay(110).css({'padding-bottom':$footerHeight + 30});
-});
+});*/
