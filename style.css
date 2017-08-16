@@ -103,6 +103,7 @@ Text Domain: ariani-martins-neon;
 - Paginação
 - Wordpress Generated
 - Quote Post Style
+- Flickr
 ---------------------------------------------------
 * EDITAR * | SITE CSS
 ---------------------------------------------------
@@ -1988,46 +1989,67 @@ Text Domain: ariani-martins-neon;
 /***************************
 * QUOTE POST STYLE
 ***************************/
-.quote-article{
-	text-align: right;
-	display: flex;
-	flex-direction: column-reverse;
-    box-shadow: 0 2px 5px rgba(0,0,0,.2);
-    margin: auto;
-    width: 89%;
-    padding: 50px;
-    margin-bottom: 20px;
-    background: rgb(250, 250, 250);
+	.quote-article{
+		text-align: right;
+		display: flex;
+		flex-direction: column-reverse;
+	    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+	    margin: auto;
+	    width: 89%;
+	    padding: 50px;
+	    margin-bottom: 20px;
+	    background: rgb(250, 250, 250);
+	}
+
+	.quote-title{
+		font-size: 13px;
+	    font-style: italic;
+	}
+
+	.quote-content {
+	    text-align: center;
+	    border-top: 1px solid rgb(204, 204, 204);
+	    border-bottom: 1px solid rgb(204, 204, 204);
+	    position: relative;
+	    quotes: "\201C""\201D""\2018""\2019";
+	}
+
+	.quote-content p {
+	    margin: 0 !important;
+	    padding: 20px;
+	}
+
+	.quote-content:after {
+	    color: rgb(204, 204, 204);
+	    content: open-quote;
+	    font-size: 80px;
+	    position: absolute;
+	    bottom: calc(100% - 20px);
+	    height: 50px;
+	    width: 50px;
+	    line-height: normal;
+	    text-align: center;
+	    transform: translateX(-50%);
+	    background: rgb(250, 250, 250);
+	}
+
+/***************************
+* FLICKR
+***************************/
+.flickr-images{
+	width: 300px !important;
+	margin: auto !important;
 }
 
-.quote-title{
-	font-size: 13px;
-    font-style: italic;
+.flickr-more{
+	display: none !important;	
 }
 
-.quote-content {
-    text-align: center;
-    border-top: 1px solid rgb(204, 204, 204);
-    border-bottom: 1px solid rgb(204, 204, 204);
-    position: relative;
-    quotes: "\201C""\201D""\2018""\2019";
-}
-
-.quote-content p {
-    margin: 0 !important;
-    padding: 20px;
-}
-
-.quote-content:after {
-    color: rgb(204, 204, 204);
-    content: open-quote;
-    font-size: 80px;
-    position: absolute;
-    bottom: calc(100% - 20px);
-    height: 50px;
-    width: 50px;
-    line-height: normal;
-    text-align: center;
-    transform: translateX(-50%);
-    background: rgb(250, 250, 250);
+.flickr-images a img:hover {
+    filter: grayscale(100%) contrast(1) brightness(90%);
+    -webkit-filter: grayscale(100%) contrast(1) brightness(90%);
+    -moz-filter: grayscale(100%) contrast(1) brightness(90%);
+    -ms-filter: grayscale(100%) contrast(1) brightness(90%);
+    -o-filter: grayscale(100%) contrast(1) brightness(90%);
+    opacity: 0.8;
 }
